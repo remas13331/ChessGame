@@ -4,7 +4,7 @@ import ChessEngine.Alliance;
 import ChessEngine.Board.Board;
 import ChessEngine.Board.Move;
 
-import java.util.List;
+import java.util.Collection;
 
 public abstract class Piece {
 
@@ -15,6 +15,6 @@ public abstract class Piece {
         this.piecePosition = piecePosition;
         this.pieceAlliance = pieceAlliance;
     }
-    public abstract List<Move> calculateLegalMoves (final Board board);
+    public abstract Collection<Move> calculateLegalMoves (final Board board);
 
 }
