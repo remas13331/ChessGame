@@ -9,6 +9,7 @@ import ChessEngine.Board.Tile;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 public class Bishop extends Piece{
     private static int[] CANDIDATE_MOVE_COORDINATE = {-9, -7, 7, 9};
@@ -16,9 +17,9 @@ public class Bishop extends Piece{
         super (piecePosition, pieceAlliance);
     }
     @Override
-    public Collection<Move> calculateLegalMoves(Board board) {
+    public Collection<Move> calculateLegalMoves(final Board board) {
 
-        ArrayList<Move> legalMoves = new ArrayList<>();
+        final List<Move> legalMoves =new ArrayList<>();
 
         for (int candidateCoordinateOffset : CANDIDATE_MOVE_COORDINATE){
             int candidateDestinationCoordinate = this.piecePosition;

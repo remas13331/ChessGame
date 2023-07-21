@@ -18,7 +18,7 @@ public class Knight extends Piece{
         super(piecePosition, pieceAlliance);
     }
     @Override
-    public Collection<Move> calculateLegalMoves(Board board) {
+    public Collection<Move> calculateLegalMoves(final Board board) {
 
         int destinationCoordinate; //1. created to know where to go + use it to get the tile of the destination
         final List<Move> legalMoves =new ArrayList<>();
