@@ -30,7 +30,6 @@ public class Bishop extends Piece{
                     break;
                 }
                 candidateDestinationCoordinate += candidateCoordinateOffset;
-
                 if(BoardUtils.isValidCoordinate(candidateDestinationCoordinate)){
                     final Tile candidateDestinationTile = board.getTile(candidateDestinationCoordinate);
                     if(!candidateDestinationTile.isTileOccupied()){

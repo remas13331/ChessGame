@@ -25,13 +25,11 @@ public class Rook extends Piece{
 
         for (int candidateCoordinateOffset : CANDIDATE_MOVE_COORDINATE){
             int candidateDestinationCoordinate = this.piecePosition;
-
             while (BoardUtils.isValidCoordinate(candidateDestinationCoordinate)){// used a while to let the destination coordinate update everytime
                 if(isFirstColumnExclusion(candidateDestinationCoordinate,candidateCoordinateOffset)||
                         isEighthColumnExclusion(candidateDestinationCoordinate,candidateCoordinateOffset)){
                     break;
                 }
-
                 candidateDestinationCoordinate += candidateCoordinateOffset;
                 if(BoardUtils.isValidCoordinate(candidateDestinationCoordinate)){
                     final Tile candidateDestinationTile = board.getTile(candidateDestinationCoordinate);
